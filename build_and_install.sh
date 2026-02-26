@@ -1,6 +1,22 @@
+echo "Installing security tools: ClamAV, fail2ban, ufw..."
+echo_and_run sudo apt install -y clamav clamav-daemon fail2ban ufw
+
+echo "Updating ClamAV virus database..."
+echo_and_run sudo systemctl stop clamav-freshclam || true
+echo_and_run sudo freshclam
+echo_and_run sudo systemctl start clamav-freshclam || true
+
+echo "Enabling and starting fail2ban..."
+echo_and_run sudo systemctl enable fail2ban
+echo_and_run sudo systemctl start fail2ban
+
+echo "Enabling and configuring UFW (Uncomplicated Firewall)..."
+echo_and_run sudo ufw allow OpenSSH
+echo_and_run sudo ufw --force enable
+
 # MIT License
 #
-# Copyright (c) 2026 YOUR_NAME_HERE
+# Copyright (c) 2026 @Tech-for-everyone
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -19,9 +35,6 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-
-#!/bin/bash
-# Unified installer for Waydroid, GAPPS, Visual Studio Code, and WhatsApp (Linux)
 
 set -e
 
@@ -113,3 +126,7 @@ log "Installing WhatsApp for Linux..."
 # Placeholder: Insert WhatsApp for Linux install commands
 
 log "All installations complete."
+
+log "please sudo apt reboot to apply all changes and updates."
+
+echo "please sudo apt reboot to apply all changes and updates."
