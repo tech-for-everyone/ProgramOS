@@ -5,7 +5,7 @@ ProgramOS is a custom Linux-based OS automation project. It creates a bootable I
 - Waydroid
 - Visual Studio Code
 - GAPPS (required with Waydroid)
-- WhatsApp for Linux (optional, selected: Yes)
+- WhatsApp for Linux (optional)
 
 ## Features
 - Automated ISO creation
