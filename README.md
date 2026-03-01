@@ -31,7 +31,7 @@ ProgramOS is a custom Linux-based OS automation project. It creates a bootable I
 - UFW
 
 ## OS
-- Linux
+- Linux Only (any distribution will run this The software will not run in WSL or Windows Subsystem for Linux)
 
 ## Lisence
  MIT License
@@ -56,3 +56,4 @@ ProgramOS is a custom Linux-based OS automation project. It creates a bootable I
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
  SOFTWARE.
+
