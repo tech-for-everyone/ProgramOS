@@ -1,3 +1,4 @@
+echo"Starting ProgramOS installation... Please wait"
 echo "Installing security tools: ClamAV, fail2ban, ufw..."
 echo_and_run sudo apt install -y clamav clamav-daemon fail2ban ufw
 
